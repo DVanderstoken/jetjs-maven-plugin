@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nc.gouv.dtsi.maven.plugins</groupId>
 	<artifactId>jetjs-maven-plugin</artifactId>
@@ -24,9 +25,17 @@
 	<scm>
 		<connection>scm:git:https://github.com/DVanderstoken/jetjs-maven-plugin.git</connection>
 		<url>https://github.com/DVanderstoken/jetjs-maven-plugin</url>
-	  <tag>jetjs-maven-plugin-1.0.0.RC1</tag>
-  </scm>
-	
+		<tag>jetjs-maven-plugin-1.0.0.RC1</tag>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>internal.repo</id>
+			<name>Temporary Staging Repository</name>
+			<url>file://C:/DEV/Tools/.m2/repository</url>
+		</repository>
+	</distributionManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.maven</groupId>
