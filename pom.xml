@@ -28,12 +28,23 @@
 		<tag>jetjs-maven-plugin-1.0.0.RC1</tag>
 	</scm>
 
-	<distributionManagement>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>libs-snapshot-local</id>
+			<name>libs-snapshot-local</name>
+			<url>http://artifactory.ref.gnc/artifactory/libs-snapshot-local</url>
+		</snapshotRepository>
 		<repository>
-			<id>internal.repo</id>
-			<name>Temporary Staging Repository</name>
-			<url>file://C:/DEV/Tools/.m2/repository</url>
+			<id>libs-release-local</id>
+			<name>libs-release-local</name>
+			<url>http://artifactory.ref.gnc/artifactory/libs-release-local</url>
 		</repository>
+
+		<site>
+			<id>DTSIMaven2Projectsites</id>
+			<name>Jetjs maven site</name>
+			<url>scp://projectsites.recif.nc/data/www/sites/projectsites.recif.nc/jetjs</url>
+		</site>
 	</distributionManagement>
 
 	<dependencies>
